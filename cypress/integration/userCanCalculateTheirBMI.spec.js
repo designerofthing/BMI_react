@@ -4,14 +4,14 @@ describe('BMI Calculator', () => {
     })
 
     it('calculates BMI in metric', () => {
-        cy.get('select#select-method').select('metric');
+        cy.get('[type="radio"]').first().check()
         cy.get('input#weight').type(90);
         cy.get('input#height').type(200);
         cy.get('button#calculate').click();
         cy.get('p#bmi-message').should('contain', 'You are Normal with a BMI of 22.50')
     })
     it('calculates BMI in imperial', () => {
-        cy.get('select#select-method').select('imperial');
+        cy.get('[type="radio"]').last().check()
         cy.get('input#weight').type(198);
         cy.get('input#feet').type(6);
         cy.get('input#inches').type(2);

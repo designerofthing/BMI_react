@@ -1,4 +1,6 @@
 body {
+  background-color:#565d47 ;
+  color: #eaac9d ;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +12,67 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+img{
+  padding-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+button{
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  background-color: #eaac9d;
+  color: #565d47;
+  font-size: 22px;
+  border-radius: 5px;
+}
+#middle{
+  text-align: center;
+  padding: 50px;
+}
+#weight {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #565d47;
+  font-size: 16px;
+}
+#height, #feet, #inches {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #565d47;
+  font-size: 16px;
+}
+#weight_text {
+  padding-right: 10px; 
+  font-size: 22px;
+}
+#height_text {
+  padding: 0 10px 0 10px; 
+  font-size: 22px;
+}
+
+#radio {
+  font-size: 22px;
+  padding: 10px;
+}
+
+#bmi-message {
+font-size: 22px;
+padding-top: 10px;
 }

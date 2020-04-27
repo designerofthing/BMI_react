@@ -4,6 +4,20 @@ import React from 'react';
 const Form = props => {
       return (
         <form onSubmit={props.onSubmitHandler}>
+          <input 
+            type="radio"
+            id="metric"
+            name="system"
+            value="metric"
+            >
+          <label htmlFor="metric">Metric</label>
+          <input 
+            type="radio"
+            id="imperial"
+            name="system"
+            value="imperial"
+            >
+          <label htmlFor="imperial">Imperial</label>
           <label htmlFor="weight">Weight</label>
           <input
             type="number"

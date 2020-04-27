@@ -4,7 +4,7 @@ import React from 'react';
 const Form = props => {
       return (
         <form onSubmit={props.onSubmitHandler}>
-          <label htmlFor="weight">Weight</label>
+          <label id="weight_text" htmlFor="weight">Weight</label>
           <input
             type="number"
             required
@@ -14,7 +14,7 @@ const Form = props => {
             id="weight"
             onChange={props.onChangeHandler}
             />
-            <label htmlFor="height">Height</label>
+            <label id="height_text" htmlFor="height">Height</label>
             <input
             type="number"
             required

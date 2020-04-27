@@ -34,6 +34,7 @@ img{
 
 button{
   margin-left: 10px;
+  margin-top: 10px;
   padding-bottom: 5px;
   background-color: #eaac9d;
   color: #565d47;
@@ -45,12 +46,14 @@ button{
   padding: 50px;
 }
 #weight {
+  margin-top: 15px;
   padding: 10px;
   border-radius: 5px;
   color: #565d47;
   font-size: 16px;
 }
-#height {
+#height, #feet, #inches {
+  margin-top: 15px;
   padding: 10px;
   border-radius: 5px;
   color: #565d47;
@@ -63,4 +66,9 @@ button{
 #height_text {
   padding: 0 10px 0 10px; 
   font-size: 22px;
+}
+
+#radio {
+  font-size: 22px;
+  padding: 10px;
 }

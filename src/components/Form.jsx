@@ -12,7 +12,7 @@ const Form = props => {
         value="metric"
         onChange={props.onChangeHandler}
         />
-      <label htmlFor="metric">Metric</label>
+      <label id="radio" htmlFor="metric">Metric</label>
       <input 
         type="radio"
         id="imperial"
@@ -20,8 +20,8 @@ const Form = props => {
         value="imperial"
         onChange={props.onChangeHandler}
       />
-      <label htmlFor="imperial">Imperial</label><br />
-      <label htmlFor="weight">Weight</label>
+      <label id="radio" htmlFor="imperial">Imperial</label><br />
+      <label id="weight_text" htmlFor="weight">Weight</label>
       <input
         type="number"
         required
@@ -43,7 +43,7 @@ const systemSelector = props => {
   if (props.system === "metric") {
     return (
       <>
-        <label htmlFor="height">Height</label>
+        <label id="height_text" htmlFor="height">Height</label>
         <input
           type="number"
           required
@@ -58,7 +58,8 @@ const systemSelector = props => {
   } else {
     return(
       <>
-        <label htmlFor="feet">Height</label>
+        
+        <label id="height_text" htmlFor="feet">Height</label>
         <input
           type="number"
           required

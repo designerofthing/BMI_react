@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from "./components/Form";
 import Message from "./components/Message";
 import { calculateBmi } from "./helpers/bmiHelper";
+import ReactPlayer from 'react-player';
 
 class App extends Component {
   state = {
@@ -37,6 +38,12 @@ class App extends Component {
   render() {
     return (
       <div id="middle">
+        <ReactPlayer 
+          url='https://archive.org/download/StarWarsTheImperialMarchDarthVadersTheme/Star%20Wars-%20The%20Imperial%20March%20%28Darth%20Vader%27s%20Theme%29.mp3' 
+          playing={ this.state.system == 'imperial' }
+          width='0px'
+          height='0px' 
+        />
         <Form
           weight={this.state.weight}
           height={this.state.height}

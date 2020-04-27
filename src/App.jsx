@@ -8,16 +8,28 @@ class App extends Component {
     weight: "",
     height: "",
     bmiValue: "",
-    bmiMessage: ""
+    bmiMessage: "",
+    system: "metric",
+    feet: "",
+    inches: ""
   };
 
   onChangeHandler = e => this.setState({ [e.target.name]: e.target.value });
 
   onSubmitHandler = e => {
     e.preventDefault();
+    let tall;
+    let heavy;
+    if ( this.state.system == "metric" ) {
+      tall = this.state.height;
+      heavy = this.state.weight;
+    } else {
+      tall = ( ( parseInt(this.state.feet) * 12) + parseInt(this.state.inches) ) * 2.54
+      heavy = this.state.weight/2.20462262
+    }
     const [bmiValue, bmiMessage] = calculateBmi(
-      this.state.weight,
-      this.state.height
+      heavy,
+      tall
     );
     this.setState({ bmiValue: bmiValue, bmiMessage: bmiMessage });
   };
@@ -28,6 +40,9 @@ class App extends Component {
         <Form
           weight={this.state.weight}
           height={this.state.height}
+          system={this.state.system}
+          feet={this.state.feet}
+          inches={this.state.inches}
           onChangeHandler={this.onChangeHandler}
           onSubmitHandler={this.onSubmitHandler}
         />
@@ -35,7 +50,7 @@ class App extends Component {
           <Message
             bmiValue={this.state.bmiValue}
             bmiMessage={this.state.bmiMessage}
-            />
+          />
         )}
       </div>
     );

@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/597799d3-390a-49de-964d-405cc503fda9/deploy-status)](https://app.netlify.com/sites/reactbmi/deploys)
+
 # BMI-calculator App
 
 ## About this project
@@ -29,7 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## Acknowledgements:<br>
 Built with the guidance of the Craft Academy documentation, Reactjs.org, Semanticui.com and Stackoverflow.
 
-## Improvments
+## Improvements
 - More diverse classifications of calculation results.
 - Calculation history.
 - Unit testing.
